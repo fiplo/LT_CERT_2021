@@ -1,5 +1,15 @@
 # Klausimai
 
+## SL2
+
+1. Kas ir kada atsitiko prijungus laikmeną?
+2. Kada ir ar tikrai piktavalis prisijungė, po to kai buvo prijungta USB laikmena?
+3. Kada šie veiksmai buvo atlikti?
+4. Kokius tolimesnius veiksmus ir kada atliko piktavalis?
+5. Kokia informacija buvo nutekinta?
+
+## SL5
+
 1. Kaip buvo užvaldyta svetainė?
 
 - Atsakymas į klausimą.
@@ -29,3 +39,14 @@
 24. Kur randasi sudo “exploit” failiukas?
 25. Koks sudo exploit failo pavadinimas?
 26. Kaip piktavalis žinojo kokie failai yra “backup” direktorijoje.
+
+## SL6
+
+1. Ar galite nustatyti kokiu mobiliuoju telefonu darbuotojas naudojosi?
+2. Ar galite paaiškinti QR kodo paskirtį?
+3. Ar galite nustatyti kokia kenkėjiška programinė įranga buvo sudiegta į mobilųjį telefoną?
+4. Ar galite paaiškinti kam konkrečiai yra skirta QRC0DE programinė įranga ir kokius
+5. veiksmus jos pagalbą galėjo atlikti piktavalis?
+6. Kokius failus galėjo paimti piktavalis?
+7. Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?
+8. Ar galite pasakyti kur yra duomenų centras?
