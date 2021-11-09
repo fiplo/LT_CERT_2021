@@ -24,7 +24,16 @@
 9. Kokius veiksmus atliko piktavalis
 10. Kada šie veiksmai buvo atlikti?
 11. Iš kokio IP adreso tai buvo atlikta?
+
+- 83.171.40.125:2021
+
 12. Kokie failai buvo parsisiųsti / nutekinti?
+
+- /backup/asmenu_duomenys_is_DB.csv
+- /backup/asmenu_duomenys_is_DB.xlsx
+- /backup/wp_ks2021.sql
+- /etc/passwd
+
 13. Iš kurio katalogo parsisiuntė failus?
 14. Kada parsisiuntė failus?
 15. Kas parsisiuntė failus?
