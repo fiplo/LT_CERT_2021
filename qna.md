@@ -12,7 +12,7 @@
 
 1. Kaip buvo užvaldyta svetainė?
 
-- Atsakymas į klausimą.
+- `HTTP POST` užklausa įkeltas `index2.php` failas veikiantis kaip reverse shell ir `exploit.sh` gauti `root` teisėms.
 
 2. Kada tai atlikta?
 3. Koks TVS įskiepis buvo pažeidžiamas?
@@ -25,24 +25,30 @@
 10. Kada šie veiksmai buvo atlikti?
 11. Iš kokio IP adreso tai buvo atlikta?
 
-- 83.171.40.125:2021
+- `83.171.40.125:2021`
 
 12. Kokie failai buvo parsisiųsti / nutekinti?
 
-- /backup/asmenu_duomenys_is_DB.csv
-- /backup/asmenu_duomenys_is_DB.xlsx
-- /backup/wp_ks2021.sql
-- /etc/passwd
+- `/backup/asmenu_duomenys_is_DB.csv`
+- `/backup/asmenu_duomenys_is_DB.xlsx`
+- `/backup/wp_ks2021.sql`
+- `/etc/passwd`
 
 13. Iš kurio katalogo parsisiuntė failus?
 14. Kada parsisiuntė failus?
 15. Kas parsisiuntė failus?
-16. kokia jautri informacija buvo saugoma wp_ks2021.sql
+16. kokia jautri informacija buvo saugoma `wp_ks2021.sql`
 17. Kaip dar įsilaužėlis pateko į virtualų privatų serverį.
 18. Kada prasidėjo ataka?
 19. Kada įsilaužėlis pateko į virtualų privatų serverį?
 20. Kaip piktavalis gavo naudotojų sąrašą?
+
+- iš `/etc/passwd` failo
+
 21. Kaip piktavalis gavo sudo/root teises?
+
+- paleisdamas `exploit.sh`
+
 22. Kada piktavalis gavo root?
 23. Per kokį vartotoją gavo root teises?
 24. Kur randasi sudo “exploit” failiukas?
