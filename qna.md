@@ -264,6 +264,7 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 13. Iš kurio katalogo parsisiuntė failus?
 
 - `/backup`
+- `/etc`
 
 	###### nustatyta pagal užklausų eilutes
 
@@ -275,10 +276,40 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 	###### nustatyta pagal `/var/log/apache2/access.log`
 
 15. Kas parsisiuntė failus?
+
+- stoties adresu `83.171.40.125` galinis naudotojas (darant prielaidą tai zombie)
+
+	###### nustatyta pagal HTTPS užklausų srcaddr
+
 16. kokia jautri informacija buvo saugoma `wp_ks2021.sql`
+
+- Nutekinta TVS administratoriaus slaptažodžio hash
+
+```
+INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','admin','admin@www1.organizacija.ks2021.lt','http://158.129.5.146','2021-06-15 07:57:06','',0,'admin');
+```
+	###### nustatyta iš failo turinio
+
 17. Kaip dar įsilaužėlis pateko į virtualų privatų serverį.
+
+- į patį serverį prisijungė su `ssh`
+
+	###### nustatyta iš failo `/var/log/auth.log`
+
 18. Kada prasidėjo ataka?
+
+- ssh laužimas root teisių paėmimas vyko tarp `2021-10-18T15:13:19` ir `2021-10-18T15:24:29`
+	- čia laikai duoti UTC, o log failuose yra -04:00, laiko zona EDT
+
+	###### nustatyta pagal `/var/log/auth.log`
+
 19. Kada įsilaužėlis pateko į virtualų privatų serverį?
+
+- sėkmingas ssh prisijungimas įvyko `2021-10-18T15:23:38Z`
+	- čia laikai duoti UTC, o log failuose yra -04:00, laiko zona EDT
+
+	###### nustatyta pagal `/var/log/auth.log`
+
 20. Kaip piktavalis gavo naudotojų sąrašą?
 
 - iš `/etc/passwd` failo
@@ -288,9 +319,28 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 - paleisdamas `exploit.sh`
 
 22. Kada piktavalis gavo root?
+
+- pirmas sėmingas autorizavimasis kaip `root` įvyko `2021-10-18T15:23:57Z`
+	- čia laikai duoti UTC, o log failuose yra -04:00, laiko zona EDT
+
+	###### nustatyta pagal `/var/log/auth.log`
+
 23. Per kokį vartotoją gavo root teises?
+
+- per vartotoją `user`
+
+	###### nustatyta pagal `/var/log/auth.log`
+
 24. Kur randasi sudo “exploit” failiukas?
+
+- `/var/www/html/exploit.sh`
+
+	###### `find / -iname exploit.sh`
+
 25. Koks sudo exploit failo pavadinimas?
+
+- `exploit.sh`
+
 26. Kaip piktavalis žinojo kokie failai yra “backup” direktorijoje.
 
 ## SL6
