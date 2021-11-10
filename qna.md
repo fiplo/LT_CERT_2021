@@ -316,7 +316,7 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 21. Kaip piktavalis gavo sudo/root teises?
 
-- paleisdamas `exploit.sh`
+- paleisdamas `exploit.sh`, kuris išnaudoja CVE-2010-0426
 
 22. Kada piktavalis gavo root?
 
