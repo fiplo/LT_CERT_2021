@@ -101,7 +101,7 @@
 2021-10-18 13:43:16.414     0.209 TCP      83.171.40.125:1337  ->    158.129.5.145:51190        4      460     1
 ```
 
-  ###### nustatyta naudojant: `grep` netflow duomenis
+###### nustatyta naudojant: `grep` netflow duomenis
 
 3. Kada šie veiksmai buvo atlikti?
 
@@ -239,7 +239,7 @@ Oct 18 11:24:27 www1 su: pam_unix(su:session): session opened for user root by u
 Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 ```
 
-  ###### nustatyta su `grep` analizuojat `/var/log/auth.log`
+###### nustatyta su `grep` analizuojat `/var/log/auth.log`
 
 - pasižiūrėjo `/backup` direktorijos turinį per reverse shell ir nutekino keletą
   failų.
@@ -301,7 +301,7 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','admin','admin@www1.organizacija.ks2021.lt','http://158.129.5.146','2021-06-15 07:57:06','',0,'admin');
 ```
 
-  ###### nustatyta iš failo turinio
+###### nustatyta iš failo turinio
 
 17. Kaip dar įsilaužėlis pateko į virtualų privatų serverį.
 
@@ -372,11 +372,12 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 - Samsung Galaxy S6 Edge
 
-	###### nustatyta pagal `f-droid` programėlės `localRepoName` iš `org.fdroid.fdroid_preferences.xml` failo
+  ###### nustatyta pagal `f-droid` programėlės `localRepoName` iš `org.fdroid.fdroid_preferences.xml` failo
 
 2. Ar galite paaiškinti QR kodo paskirtį?
 
-- QR kodas laiko nuorodą į kenkėjišą programėlę (APK) su URL `http://83.171.40.125/QRC0DE-singed.apk`
+- QR kodas laiko nuorodą į kenkėjišą programėlę (APK) su URL
+  `http://83.171.40.125/QRC0DE-singed.apk`
 
 3. Ar galite nustatyti kokia kenkėjiška programinė įranga buvo sudiegta į
 
@@ -384,6 +385,13 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 4. Ar galite paaiškinti kam konkrečiai yra skirta QRC0DE programinė įranga ir
    kokius veiksmus jos pagalbą galėjo atlikti piktavalis?
+
+   QRC0DE yra trojanas, kuris įrašo kenkėjiška programine įrangą ir sukuria
+   backdoor įsilaužėliui prisijungti, įsilaužėlis gali prisijungti prie telefono
+   komandinės eilutės naudojant metasploit, nuotolinių būdu turėti prieega prie
+   telefono naudojant wondergo.
+
+   ###### Nustatyta perskaičius QRC0DE aplikacijos data directorijoje esantį python kodą
 
 5. Kokius failus galėjo paimti piktavalis?
 
