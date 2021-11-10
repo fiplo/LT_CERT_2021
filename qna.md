@@ -206,19 +206,6 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 ```
 
 - pasižiūrėjo `/backup` direktorijos turinį per reverse shell ir nutekino keletą failų.
-- išjungė serverį (denial of service); `tail /root/.bash_history` duoda:
-```
-exit
-ls /dev/
-exit
-poweroff 
-crontab -l
-ls /backup/
-ls -alh /backup/
-date
-exit
-exit
-```
 
 
 10. Kada šie veiksmai buvo atlikti?
