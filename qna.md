@@ -335,7 +335,7 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 - `/var/www/html/exploit.sh`
 
-	###### `find / -iname exploit.sh`
+	###### nustatyta su `find / -iname exploit.sh`
 
 25. Koks sudo exploit failo pavadinimas?
 
@@ -350,6 +350,11 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 ## SL6
 
 1. Ar galite nustatyti kokiu mobiliuoju telefonu darbuotojas naudojosi?
+
+- Samsung Galaxy S6 Edge
+
+	###### nustatyta pagal `f-droid` programėlės `localRepoName` iš `org.fdroid.fdroid_preferences.xml` failo
+
 2. Ar galite paaiškinti QR kodo paskirtį?
 3. Ar galite nustatyti kokia kenkėjiška programinė įranga buvo sudiegta į
    mobilųjį telefoną?
