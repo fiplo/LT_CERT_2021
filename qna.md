@@ -354,10 +354,11 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 3. Ar galite nustatyti kokia kenkėjiška programinė įranga buvo sudiegta į
    mobilųjį telefoną?
 4. Ar galite paaiškinti kam konkrečiai yra skirta QRC0DE programinė įranga ir
-   kokius
-5. veiksmus jos pagalbą galėjo atlikti piktavalis?
-6. Kokius failus galėjo paimti piktavalis?
-7. Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?
-8. Ar galite pasakyti kur yra duomenų centras?
+   kokius veiksmus jos pagalbą galėjo atlikti piktavalis?
+5. Kokius failus galėjo paimti piktavalis?
+6. Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?
+7. Ar galite pasakyti kur yra duomenų centras?
 
 - 1360 Kifer Rd, Sunnyvale, CA 94086, USA
+
+	###### nustatyta iš kooridinačių rastų duomenų centro nuotraukos metaduomenyse
