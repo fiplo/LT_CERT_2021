@@ -389,8 +389,15 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 6. Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?
 
+- dvi nuotraukos turi šiuos duomenis:
+
+  - nuotrauka `IMG_0006.jpg` padaryta `2018-10-25T14:12:04` pagal `EXIF` arba `2018-10-25T14:12:05` pagal `XMP` ir `IPTC`, fotografuota su Google Pixel 3 XL, metaduomenys modifikuoti su Adobe Photoshop CC 2018, Windows versija
+  - nuotrauka `IMG_0007.jpg` padaryta `2005-01-16T10:12:45` pagal `EXIF` metaduomenis, fotografuota su SONY DSC-P92
+
+	###### nustatyta nuskaičius `EXIF`, ir kur yra `XMP` ir `IPTC` duomenis naudojant `GIMP`
+
 7. Ar galite pasakyti kur yra duomenų centras?
 
 - 1360 Kifer Rd, Sunnyvale, CA 94086, USA
 
-  ###### nustatyta iš kooridinačių rastų duomenų centro nuotraukos metaduomenyse
+  ###### nustatyta iš kooridinačių rastų duomenų centro nuotraukos `EXIF` metaduomenyse
