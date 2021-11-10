@@ -172,17 +172,59 @@ Archive:  Desktop.zip
 - `POST /wp-content/plugins/cysteme-finder/php/connector.php?wphome=/var/www/html/&wpurl=http://158.129.5.146 HTTP/1.1`
 
 5. Kada ji buvo atsiųsta?
+
+- tarp `2021-10-18T11:16:17` ir `2021-10-18T11:18:32`
+
 6. Iš kokio IP adreso tai buvo padaryta?
 
 - `83.171.40.125:2021`
 
 7. Koks buvo jos tikslas?
+
+- įkelti reverse-shell
+
 8. Koks CVE buvo išnaudotas?
 
 - CVE-2016-10955
 
 9. Kokius veiksmus atliko piktavalis
+
+- atspėjo vartotojo `user` slaptažodį (brutefoce silpną slaptažodį?) per `ssh`
+	- `Oct 18 11:22:43 www1 sshd[1621]: Accepted password for user from 83.171.40.125 port 37272 ssh2`
+- pasidarė `root` teises ir prisijungė kaip `root`
+```
+Oct 18 11:23:38 www1 sshd[1641]: Accepted password for user from 83.171.40.125 port 37274 ssh2
+Oct 18 11:23:38 www1 sshd[1641]: pam_unix(sshd:session): session opened for user user by (uid=0)
+Oct 18 11:23:38 www1 systemd-logind[359]: New session 8 of user user.
+Oct 18 11:23:38 www1 systemd: pam_unix(systemd-user:session): session opened for user user by (uid=0)
+Oct 18 11:23:57 www1 su: (to root) user on pts/0
+Oct 18 11:23:57 www1 su: pam_unix(su:session): session opened for user root by user(uid=0)
+Oct 18 11:24:27 www1 su: pam_unix(su:session): session closed for user root
+Oct 18 11:24:27 www1 su: (to root) user on pts/0
+Oct 18 11:24:27 www1 su: pam_unix(su:session): session opened for user root by user(uid=0)
+Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
+```
+
+- pasižiūrėjo `/backup` direktorijos turinį per reverse shell ir nutekino keletą failų.
+- išjungė serverį (denial of service); `tail /root/.bash_history` duoda:
+```
+exit
+ls /dev/
+exit
+poweroff 
+crontab -l
+ls /backup/
+ls -alh /backup/
+date
+exit
+exit
+```
+
+
 10. Kada šie veiksmai buvo atlikti?
+
+- tarp `2021-10-18T11:16:17` ir `2021-10-18T11:18:32`
+
 11. Iš kokio IP adreso tai buvo atlikta?
 
 - `83.171.40.125:2021`
