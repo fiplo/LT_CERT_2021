@@ -341,7 +341,11 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 - `exploit.sh`
 
+	###### nustatyta pagal HTTP užklausą
+
 26. Kaip piktavalis žinojo kokie failai yra “backup” direktorijoje.
+
+- su HTTP GET užklasa `GET /wp-content/plugins/cysteme-finder/php/connector.php?wphome=/backup&cmd=open&init=1&tree=1` gavo direktorijos turinį json pavidalu
 
 ## SL6
 
