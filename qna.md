@@ -1,4 +1,4 @@
-#Ataskaita pildė:
+# Ataskaitą pildė:
 
 - Gediminas Jakutis, Kauno Technologijos Universitetas
 - Paulius Ratkevičius, Kauno Technologijos Universitetas
@@ -15,6 +15,9 @@
 184     1448    cmd.exe 0xc104b4cb6080  0       -       2       True    2021-08-31 10:34:47.000000      2021-10-18 10:37:32.000000      Disabled
 4508    1924    cmd.exe 0xc104b5104080  8       -       2       False   2021-10-18 10:45:39.000000      N/A     Disabled
 ```
+- panašu pasileido PID 4508
+
+	###### nustatyta naudojant: `volatility3`, `grep`
 
 
 2. Kada ir ar tikrai piktavalis prisijungė, po to kai buvo prijungta USB
@@ -97,9 +100,13 @@
 2021-10-18 13:43:16.414     0.209 TCP      83.171.40.125:1337  ->    158.129.5.145:51190        4      460     1
 ```
 
+	###### nustatyta naudojant: `grep` netflow duomenis
+
 3. Kada šie veiksmai buvo atlikti?
 
 - Tarp `2021-10-18T13:21:12` ir `2021-10-18T13:43:16`
+
+	###### nustatyta pagal 2 punktą
 
 4. Kokius tolimesnius veiksmus ir kada atliko piktavalis?
 
@@ -110,6 +117,8 @@
 - analizavus su virustotal rodo:
 ![virus total report](virus_total_1.png)
 ![virus total report](virus_total_2.png)
+
+	###### nustatyta iš [nešifruoto] tcp dump'o iš pcap
 
 5. Kokia informacija buvo nutekinta?
 
@@ -159,33 +168,51 @@ Archive:  Desktop.zip
 - `HTTP POST` užklausa įkeltas `index2.php` failas veikiantis kaip reverse shell
   ir `exploit.sh` gauti `root` teisėms.
 
+	###### nustatyta iš [nešifruotos] HTTP užklausos užfiksuotos sraute
+
 2. Kada tai atlikta?
 
-- tarp `2021-10-18T11:16:17` ir `2021-10-18T11:18:32`
+- tarp `2021-10-18T15:00:10Z` ir `2021-10-18T15:08:20Z`
+	- čia laikai duoti UTC, o log failuose yra -04:00, laiko zona EDT
+
+	###### nustatyta pritaikius `grep` apache `access.log`
 
 3. Koks TVS įskiepis buvo pažeidžiamas?
 
 - `cysteme-finder` (wordpress)
 
+	###### nustatyta iš [nešifruotos] HTTP užklausos užfiksuotos sraute – užklausa nurodo įskiepio vardą
+
 4. Kokia kenksminga užklausa buvo atsiųsta.
 
 - `POST /wp-content/plugins/cysteme-finder/php/connector.php?wphome=/var/www/html/&wpurl=http://158.129.5.146 HTTP/1.1`
 
+	###### nustatyta iš [nešifruotos] HTTP užklausos užfiksuotos sraute
+
 5. Kada ji buvo atsiųsta?
 
-- tarp `2021-10-18T11:16:17` ir `2021-10-18T11:18:32`
+- `2021-10-18T15:00:10Z`
+	- čia laikai duoti UTC, o log failuose yra -04:00, laiko zona EDT
+
+	###### nustatyta pagal netflow koreliuoto su užklausa iš punkto 4
 
 6. Iš kokio IP adreso tai buvo padaryta?
 
-- `83.171.40.125:2021`
+- `83.171.40.125`
+
+	###### nustatyta pagal užklausos srcaddr užfiksuotos sraute ir patikrinus apache `access.log`
 
 7. Koks buvo jos tikslas?
 
-- įkelti reverse-shell
+- įkelti reverse-shell failą index2.php
+
+	###### nustatyta padarius užklausos HTTP dump ir pasižiūrėjus į failą
 
 8. Koks CVE buvo išnaudotas?
 
 - CVE-2016-10955
+
+	###### nustatyta su web paieškos užklausa `cisteme-finder POST vulnerability CVE` ir suradus variantą, kuris atitiko ataką
 
 9. Kokius veiksmus atliko piktavalis
 
@@ -205,16 +232,25 @@ Oct 18 11:24:27 www1 su: pam_unix(su:session): session opened for user root by u
 Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 ```
 
+	###### nustatyta su `grep` analizuojat `/var/log/auth.log`
+
 - pasižiūrėjo `/backup` direktorijos turinį per reverse shell ir nutekino keletą failų.
 
+	###### nustatyta peržiūrėjus visas HTTPS užklausas iš atakuojančiojo ip adreso sraute
 
 10. Kada šie veiksmai buvo atlikti?
 
-- tarp `2021-10-18T11:16:17` ir `2021-10-18T11:18:32`
+- direktorijos turinys paimtas `2021-10-18T15:04:58Z`
+- ssh laužimas root teisių paėmimas vyko tarp `2021-10-18T15:13:19` ir `2021-10-18T15:24:29`
+	- čia laikai duoti UTC, o log failuose yra -04:00, laiko zona EDT
+
+	###### nustatyta pagal `/var/log/auth.log` ir `/var/log/apache2/access.log`
 
 11. Iš kokio IP adreso tai buvo atlikta?
 
-- `83.171.40.125:2021`
+- `83.171.40.125`
+
+	###### nustatyta pagal HTTPS užklausų srcaddr
 
 12. Kokie failai buvo parsisiųsti / nutekinti?
 
@@ -223,8 +259,21 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 - `/backup/wp_ks2021.sql`
 - `/etc/passwd`
 
+	###### nustatyta peržiūrėjus visas HTTPS užklausas iš atakuojančiojo ip adreso sraute ir išsaugojus perduotų duomenų turinį
+
 13. Iš kurio katalogo parsisiuntė failus?
+
+- `/backup`
+
+	###### nustatyta pagal užklausų eilutes
+
 14. Kada parsisiuntė failus?
+
+- tarp `2021-10-18T15:07:38Z` ir `2021-10-18T15:18:32`
+	- čia laikai duoti UTC, o log failuose yra -04:00, laiko zona EDT
+
+	###### nustatyta pagal `/var/log/apache2/access.log`
+
 15. Kas parsisiuntė failus?
 16. kokia jautri informacija buvo saugoma `wp_ks2021.sql`
 17. Kaip dar įsilaužėlis pateko į virtualų privatų serverį.
