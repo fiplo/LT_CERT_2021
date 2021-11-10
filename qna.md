@@ -158,6 +158,9 @@ Archive:  Desktop.zip
   ir `exploit.sh` gauti `root` teisėms.
 
 2. Kada tai atlikta?
+
+- tarp `2021-10-18T11:16:17` ir `2021-10-18T11:18:32`
+
 3. Koks TVS įskiepis buvo pažeidžiamas?
 
 - `cysteme-finder` (wordpress)
