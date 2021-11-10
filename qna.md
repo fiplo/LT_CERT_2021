@@ -9,7 +9,7 @@
 
 1. Kas ir kada atsitiko prijungus laikmeną?
 
-- `10/18/2021 10:42:59 UTC`
+- `2021-10-18T10:42:59+0000`
 ```
 1448    1924    cmd.exe 0xc104b52b7080  5       -       2       True    2021-08-31 10:26:01.000000      N/A     Disabled
 184     1448    cmd.exe 0xc104b4cb6080  0       -       2       True    2021-08-31 10:34:47.000000      2021-10-18 10:37:32.000000      Disabled
