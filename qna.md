@@ -20,6 +20,8 @@
 2. Kada ir ar tikrai piktavalis prisijungė, po to kai buvo prijungta USB
    laikmena?
 
+- Taip, tarp `2021-10-18T13:21:12` ir `2021-10-18T13:43:16`
+
 ```
 2021-10-18 13:21:12.041     1.442 TCP      83.171.40.125:1337  ->    158.129.5.145:51008       46   405409     1
 2021-10-18 13:21:12.040     4.043 TCP      158.129.5.145:51008 ->    83.171.40.125:1337        53     7671     1
@@ -97,7 +99,7 @@
 
 3. Kada šie veiksmai buvo atlikti?
 
-- Tarp `2021-10-18 13:21:12` ir `2021-10-18 13:43:16`
+- Tarp `2021-10-18T13:21:12` ir `2021-10-18T13:43:16`
 
 4. Kokius tolimesnius veiksmus ir kada atliko piktavalis?
 
