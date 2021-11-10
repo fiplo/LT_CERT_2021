@@ -100,6 +100,27 @@
 - Tarp `2021-10-18 13:21:12` ir `2021-10-18 13:43:16`
 
 4. Kokius tolimesnius veiksmus ir kada atliko piktavalis?
+
+- sukeltas PE, sha256sum `a7121b8eca5bd7d1b21a919a954fa7d772148690ca2e267767117aec00a0f1ad`
+- analizuotas su virustotal rodo:
+```
+ALYac Generic.Exploit.Shellcode.2.8D14AE91
+Arcabit Generic.Exploit.Shellcode.2.8D14AE91
+BitDefender Generic.Exploit.Shellcode.2.8D14AE91
+BitDefenderTheta Gen:NN.ZedlaF.34266.kq4@amSyfWm
+ClamAV Win.Exploit.Meterpreter-9777172-0
+Emsisoft Generic.Exploit.Shellcode.2.8D14AE91 (B)
+eScan Generic.Exploit.Shellcode.2.8D14AE91
+FireEye Generic.Exploit.Shellcode.2.8D14AE91
+GData Generic.Exploit.Shellcode.2.8D14AE91
+Kaspersky HEUR:Exploit.Win32.Shellcode.gen
+MAX Malware (ai Score=80)
+Microsoft HackTool:Win32/Meterpreter.A!dll
+Sangfor Engine Zero Trojan.Generic-Script.Save.a4f24852
+Sophos Mal/Swrort-Y
+ZoneAlarm by Check Point HEUR:Exploit.Win32.Shellcode.gen
+```
+
 5. Kokia informacija buvo nutekinta?
 
 ## SL5
