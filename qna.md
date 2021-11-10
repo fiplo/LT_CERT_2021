@@ -9,7 +9,7 @@ Ataskaita pildė:
 
 ## SL2
 
-1. Kas ir kada atsitiko prijungus laikmeną?
+1. Kas ir kada atsitiko prijungus laikmeną? 2021-10-10 10:43
 2. Kada ir ar tikrai piktavalis prisijungė, po to kai buvo prijungta USB
    laikmena?
 3. Kada šie veiksmai buvo atlikti?
