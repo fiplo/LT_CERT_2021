@@ -375,12 +375,20 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 	###### nustatyta pagal `f-droid` programėlės `localRepoName` iš `org.fdroid.fdroid_preferences.xml` failo
 
 2. Ar galite paaiškinti QR kodo paskirtį?
+
+- QR kodas laiko nuorodą į kenkėjišą programėlę (APK) su URL `http://83.171.40.125/QRC0DE-singed.apk`
+
 3. Ar galite nustatyti kokia kenkėjiška programinė įranga buvo sudiegta į
+
    mobilųjį telefoną? QRC0DE-singed.apk ![virus_total_3](virus_total_3.png)
+
 4. Ar galite paaiškinti kam konkrečiai yra skirta QRC0DE programinė įranga ir
    kokius veiksmus jos pagalbą galėjo atlikti piktavalis?
+
 5. Kokius failus galėjo paimti piktavalis?
+
 6. Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?
+
 7. Ar galite pasakyti kur yra duomenų centras?
 
 - 1360 Kifer Rd, Sunnyvale, CA 94086, USA
