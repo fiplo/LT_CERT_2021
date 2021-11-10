@@ -101,25 +101,13 @@
 
 4. Kokius tolimesnius veiksmus ir kada atliko piktavalis?
 
-- sukeltas PE, sha256sum `a7121b8eca5bd7d1b21a919a954fa7d772148690ca2e267767117aec00a0f1ad`
-- analizuotas su virustotal rodo:
-```
-ALYac Generic.Exploit.Shellcode.2.8D14AE91
-Arcabit Generic.Exploit.Shellcode.2.8D14AE91
-BitDefender Generic.Exploit.Shellcode.2.8D14AE91
-BitDefenderTheta Gen:NN.ZedlaF.34266.kq4@amSyfWm
-ClamAV Win.Exploit.Meterpreter-9777172-0
-Emsisoft Generic.Exploit.Shellcode.2.8D14AE91 (B)
-eScan Generic.Exploit.Shellcode.2.8D14AE91
-FireEye Generic.Exploit.Shellcode.2.8D14AE91
-GData Generic.Exploit.Shellcode.2.8D14AE91
-Kaspersky HEUR:Exploit.Win32.Shellcode.gen
-MAX Malware (ai Score=80)
-Microsoft HackTool:Win32/Meterpreter.A!dll
-Sangfor Engine Zero Trojan.Generic-Script.Save.a4f24852
-Sophos Mal/Swrort-Y
-ZoneAlarm by Check Point HEUR:Exploit.Win32.Shellcode.gen
-```
+- sukelti PE su shellcode, sha256sum:
+	- `a7121b8eca5bd7d1b21a919a954fa7d772148690ca2e267767117aec00a0f1ad`
+	- `2160bd3bc8d955ab05777fece91b51e5c4be688b083113db6f0118bb1f6e4050`
+
+- analizavus su virustotal rodo:
+![virus total report](virus_total_1.png)
+![virus total report](virus_total_2.png)
 
 5. Kokia informacija buvo nutekinta?
 
