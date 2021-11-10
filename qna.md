@@ -111,6 +111,45 @@
 
 5. Kokia informacija buvo nutekinta?
 
+- Documents.zip
+```
+Archive:  Documents.zip
+ Length   Method    Size  Cmpr    Date    Time   CRC-32   Name
+--------  ------  ------- ---- ---------- ----- --------  ----
+   13976  Defl:N    11026  21% 05-23-2021 22:57 4b6b364c  Documents\atostogu grafikas.xlsx
+   12677  Defl:N     9707  23% 05-27-2021 00:57 b097da89  Documents\covid-19 suvestine.xlsx
+--------          -------  ---                            -------
+   26653            20733  22%                            2 files
+
+```
+
+- Desktop.zip
+```
+Archive:  Desktop.zip
+ Length   Method    Size  Cmpr    Date    Time   CRC-32   Name
+--------  ------  ------- ---- ---------- ----- --------  ----
+  353915  Defl:N   342991   3% 05-19-2021 22:02 544bf431  Desktop\Babinos remontas - isankstine saskaita.pdf
+  273936  Defl:N   272689   1% 05-19-2021 20:28 45f7f7e2  Desktop\pakvietimas.png
+--------          -------  ---                            -------
+  627851           615680   2%                            2 files
+
+```
+- `atostogu grafikas.xlsx`
+	- Darbuotojų vardai ir pavardės
+	- Darbuotojų pareigos
+	- Atostogų grafikai
+- `covid-19 suvestine.xlsxi`
+	- Darbuotojų vardai ir pavardės
+	- Darbuotojų pareigos
+	- Darbuotojų gimimo datos
+	- COVID-19 vakcinacijos statusas
+- `pakvietimas.png`
+	- Žmogaus vardu Palemonas telefono numeris
+	- Palemono sūnaus vardu Erazmas gimimo data
+- `Babinos remontas - isankstine saskaita.pdf`
+	- Remonto kaštai
+	- Užsakovo vardas ir pavarde, telefono numeris
+
 ## SL5
 
 1. Kaip buvo užvaldyta svetainė?
