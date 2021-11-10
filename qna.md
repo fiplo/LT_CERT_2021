@@ -16,11 +16,23 @@
 
 2. Kada tai atlikta?
 3. Koks TVS įskiepis buvo pažeidžiamas?
+
+- `cysteme-finder` (wordpress)
+
 4. Kokia kenksminga užklausa buvo atsiųsta.
+
+- `POST /wp-content/plugins/cysteme-finder/php/connector.php?wphome=/var/www/html/&wpurl=http://158.129.5.146 HTTP/1.1`
+
 5. Kada ji buvo atsiųsta?
 6. Iš kokio IP adreso tai buvo padaryta?
+
+- `83.171.40.125:2021`
+
 7. Koks buvo jos tikslas?
 8. Koks CVE buvo išnaudotas?
+
+- CVE-2016-10955
+
 9. Kokius veiksmus atliko piktavalis
 10. Kada šie veiksmai buvo atlikti?
 11. Iš kokio IP adreso tai buvo atlikta?
@@ -65,3 +77,5 @@
 6. Kokius failus galėjo paimti piktavalis?
 7. Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?
 8. Ar galite pasakyti kur yra duomenų centras?
+
+- 1360 Kifer Rd, Sunnyvale, CA 94086, USA
