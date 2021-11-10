@@ -1,3 +1,8 @@
+#Pildė
+
+- Gediminas Jakutis, Kauno Technologijos Universitetas
+- Paulius Ratkevičius, Kauno Technologijos Universitetas
+
 # Klausimai
 
 ## SL2
