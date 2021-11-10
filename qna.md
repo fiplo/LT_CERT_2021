@@ -1,13 +1,13 @@
 # Ataskaitą pildė:
 
-- Gediminas Jakutis, Kauno Technologijos Universitetas
-- Paulius Ratkevičius, Kauno Technologijos Universitetas
+- **Gediminas Jakutis**, Kauno Technologijos Universitetas
+- **Paulius Ratkevičius**, Kauno Technologijos Universitetas
 
 # Klausimai
 
 ## SL2
 
-1. Kas ir kada atsitiko prijungus laikmeną?
+1. **Kas ir kada atsitiko prijungus laikmeną?**
 
 - `2021-10-18T10:42:59+0000`
 
@@ -21,8 +21,8 @@
 
   ###### nustatyta naudojant: `volatility3`, `grep`
 
-2. Kada ir ar tikrai piktavalis prisijungė, po to kai buvo prijungta USB
-   laikmena?
+2. **Kada ir ar tikrai piktavalis prisijungė, po to kai buvo prijungta USB
+   laikmena?**
 
 - Taip, tarp `2021-10-18T13:21:12` ir `2021-10-18T13:43:16`
 
@@ -103,13 +103,13 @@
 
 ###### nustatyta naudojant: `grep` netflow duomenis
 
-3. Kada šie veiksmai buvo atlikti?
+3. **Kada šie veiksmai buvo atlikti?**
 
 - Tarp `2021-10-18T13:21:12` ir `2021-10-18T13:43:16`
 
   ###### nustatyta pagal 2 punktą
 
-4. Kokius tolimesnius veiksmus ir kada atliko piktavalis?
+4. **Kokius tolimesnius veiksmus ir kada atliko piktavalis?**
 
 - sukelti PE su shellcode, sha256sum:
 
@@ -121,7 +121,7 @@
 
   ###### nustatyta iš [nešifruoto] tcp dump'o iš pcap
 
-5. Kokia informacija buvo nutekinta?
+5. **Kokia informacija buvo nutekinta?**
 
 - Documents.zip
 
@@ -167,14 +167,14 @@ Archive:  Desktop.zip
 
 ## SL5
 
-1. Kaip buvo užvaldyta svetainė?
+1. **Kaip buvo užvaldyta svetainė?**
 
 - `HTTP POST` užklausa įkeltas `index2.php` failas veikiantis kaip reverse shell
   ir `exploit.sh` gauti `root` teisėms.
 
   ###### nustatyta iš [nešifruotos] HTTP užklausos užfiksuotos sraute
 
-2. Kada tai atlikta?
+2. **Kada tai atlikta?**
 
 - tarp `2021-10-18T15:00:10Z` ir `2021-10-18T15:08:20Z`
 
@@ -182,19 +182,19 @@ Archive:  Desktop.zip
 
   ###### nustatyta pritaikius `grep` apache `access.log`
 
-3. Koks TVS įskiepis buvo pažeidžiamas?
+3. **Koks TVS įskiepis buvo pažeidžiamas?**
 
 - `cysteme-finder` (wordpress)
 
   ###### nustatyta iš [nešifruotos] HTTP užklausos užfiksuotos sraute – užklausa nurodo įskiepio vardą
 
-4. Kokia kenksminga užklausa buvo atsiųsta.
+4. **Kokia kenksminga užklausa buvo atsiųsta.**
 
 - `POST /wp-content/plugins/cysteme-finder/php/connector.php?wphome=/var/www/html/&wpurl=http://158.129.5.146 HTTP/1.1`
 
   ###### nustatyta iš [nešifruotos] HTTP užklausos užfiksuotos sraute
 
-5. Kada ji buvo atsiųsta?
+5. **Kada ji buvo atsiųsta?**
 
 - `2021-10-18T15:00:10Z`
 
@@ -202,25 +202,25 @@ Archive:  Desktop.zip
 
   ###### nustatyta pagal netflow koreliuoto su užklausa iš punkto 4
 
-6. Iš kokio IP adreso tai buvo padaryta?
+6. **Iš kokio IP adreso tai buvo padaryta?**
 
 - `83.171.40.125`
 
   ###### nustatyta pagal užklausos srcaddr užfiksuotos sraute ir patikrinus apache `access.log`
 
-7. Koks buvo jos tikslas?
+7. **Koks buvo jos tikslas?**
 
 - įkelti reverse-shell failą index2.php
 
   ###### nustatyta padarius užklausos HTTP dump ir pasižiūrėjus į failą
 
-8. Koks CVE buvo išnaudotas?
+8. **Koks CVE buvo išnaudotas?**
 
 - CVE-2016-10955
 
   ###### nustatyta su web paieškos užklausa `cisteme-finder POST vulnerability CVE` ir suradus variantą, kuris atitiko ataką
 
-9. Kokius veiksmus atliko piktavalis
+9. **Kokius veiksmus atliko piktavalis**
 
 - atspėjo vartotojo `user` slaptažodį (brutefoce silpną slaptažodį?) per `ssh`
   - `Oct 18 11:22:43 www1 sshd[1621]: Accepted password for user from 83.171.40.125 port 37272 ssh2`
@@ -246,7 +246,7 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 
   ###### nustatyta peržiūrėjus visas HTTPS užklausas iš atakuojančiojo ip adreso sraute
 
-10. Kada šie veiksmai buvo atlikti?
+10. **Kada šie veiksmai buvo atlikti?**
 
 - direktorijos turinys paimtas `2021-10-18T15:04:58Z`
 - ssh laužimas root teisių paėmimas vyko tarp `2021-10-18T15:13:19` ir
@@ -256,13 +256,13 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 
   ###### nustatyta pagal `/var/log/auth.log` ir `/var/log/apache2/access.log`
 
-11. Iš kokio IP adreso tai buvo atlikta?
+11. **Iš kokio IP adreso tai buvo atlikta?**
 
 - `83.171.40.125`
 
   ###### nustatyta pagal HTTPS užklausų srcaddr
 
-12. Kokie failai buvo parsisiųsti / nutekinti?
+12. **Kokie failai buvo parsisiųsti / nutekinti?**
 
 - `/backup/asmenu_duomenys_is_DB.csv`
 - `/backup/asmenu_duomenys_is_DB.xlsx`
@@ -271,14 +271,14 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 
   ###### nustatyta peržiūrėjus visas HTTPS užklausas iš atakuojančiojo ip adreso sraute ir išsaugojus perduotų duomenų turinį
 
-13. Iš kurio katalogo parsisiuntė failus?
+13. **Iš kurio katalogo parsisiuntė failus?**
 
 - `/backup`
 - `/etc`
 
   ###### nustatyta pagal užklausų eilutes
 
-14. Kada parsisiuntė failus?
+14. **Kada parsisiuntė failus?**
 
 - tarp `2021-10-18T15:07:38Z` ir `2021-10-18T15:18:32`
 
@@ -286,14 +286,14 @@ Oct 18 11:24:29 www1 su: pam_unix(su:session): session closed for user root
 
   ###### nustatyta pagal `/var/log/apache2/access.log`
 
-15. Kas parsisiuntė failus?
+15. **Kas parsisiuntė failus?**
 
 - stoties adresu `83.171.40.125` galinis naudotojas (darant prielaidą tai
   zombie)
 
   ###### nustatyta pagal HTTPS užklausų srcaddr
 
-16. kokia jautri informacija buvo saugoma `wp_ks2021.sql`
+16. **kokia jautri informacija buvo saugoma `wp_ks2021.sql`**
 
 - Nutekinta TVS administratoriaus slaptažodžio hash
 
@@ -303,13 +303,13 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 ###### nustatyta iš failo turinio
 
-17. Kaip dar įsilaužėlis pateko į virtualų privatų serverį.
+17. **Kaip dar įsilaužėlis pateko į virtualų privatų serverį.**
 
 - į patį serverį prisijungė su `ssh`
 
   ###### nustatyta iš failo `/var/log/auth.log`
 
-18. Kada prasidėjo ataka?
+18. **Kada prasidėjo ataka?**
 
 - ssh laužimas root teisių paėmimas vyko tarp `2021-10-18T15:13:19` ir
   `2021-10-18T15:24:29`
@@ -318,7 +318,7 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
   ###### nustatyta pagal `/var/log/auth.log`
 
-19. Kada įsilaužėlis pateko į virtualų privatų serverį?
+19. **Kada įsilaužėlis pateko į virtualų privatų serverį?**
 
 - sėkmingas ssh prisijungimas įvyko `2021-10-18T15:23:38Z`
 
@@ -326,15 +326,15 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
   ###### nustatyta pagal `/var/log/auth.log`
 
-20. Kaip piktavalis gavo naudotojų sąrašą?
+20. **Kaip piktavalis gavo naudotojų sąrašą?**
 
 - iš `/etc/passwd` failo
 
-21. Kaip piktavalis gavo sudo/root teises?
+21. **Kaip piktavalis gavo sudo/root teises?**
 
 - paleisdamas `exploit.sh`, kuris išnaudoja CVE-2010-0426
 
-22. Kada piktavalis gavo root?
+22. **Kada piktavalis gavo root?**
 
 - pirmas sėmingas autorizavimasis kaip `root` įvyko `2021-10-18T15:23:57Z`
 
@@ -342,25 +342,25 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
   ###### nustatyta pagal `/var/log/auth.log`
 
-23. Per kokį vartotoją gavo root teises?
+23. **Per kokį vartotoją gavo root teises?**
 
 - per vartotoją `user`
 
   ###### nustatyta pagal `/var/log/auth.log`
 
-24. Kur randasi sudo “exploit” failiukas?
+24. **Kur randasi sudo “exploit” failiukas?**
 
 - `/var/www/html/exploit.sh`
 
   ###### nustatyta su `find / -iname exploit.sh`
 
-25. Koks sudo exploit failo pavadinimas?
+25. **Koks sudo exploit failo pavadinimas?**
 
 - `exploit.sh`
 
   ###### nustatyta pagal HTTP užklausą
 
-26. Kaip piktavalis žinojo kokie failai yra “backup” direktorijoje.
+26. **Kaip piktavalis žinojo kokie failai yra “backup” direktorijoje.**
 
 - su HTTP GET užklasa
   `GET /wp-content/plugins/cysteme-finder/php/connector.php?wphome=/backup&cmd=open&init=1&tree=1`
@@ -368,43 +368,67 @@ INSERT INTO `wp_users` VALUES (1,'admin','$P$B3oEaW8iUNesGgQWw68DES/43eWLtq0','a
 
 ## SL6
 
-1. Ar galite nustatyti kokiu mobiliuoju telefonu darbuotojas naudojosi?
+1. **Ar galite nustatyti kokiu mobiliuoju telefonu darbuotojas naudojosi?**
 
 - Samsung Galaxy S6 Edge
 
   ###### nustatyta pagal `f-droid` programėlės `localRepoName` iš `org.fdroid.fdroid_preferences.xml` failo
 
-2. Ar galite paaiškinti QR kodo paskirtį?
+2. **Ar galite paaiškinti QR kodo paskirtį?**
 
 - QR kodas laiko nuorodą į kenkėjišą programėlę (APK) su URL
   `http://83.171.40.125/QRC0DE-singed.apk`
 
-3. Ar galite nustatyti kokia kenkėjiška programinė įranga buvo sudiegta į
+3. **Ar galite nustatyti kokia kenkėjiška programinė įranga buvo sudiegta į**
 
    mobilųjį telefoną? QRC0DE-singed.apk ![virus_total_3](virus_total_3.png)
 
-4. Ar galite paaiškinti kam konkrečiai yra skirta QRC0DE programinė įranga ir
+4. **Ar galite paaiškinti kam konkrečiai yra skirta QRC0DE programinė įranga ir**
    kokius veiksmus jos pagalbą galėjo atlikti piktavalis?
 
-   QRC0DE yra trojanas, kuris įrašo kenkėjiška programine įrangą ir sukuria
+- `QRC0DE` yra trojanas, kuris įrašo kenkėjiška programine įrangą ir sukuria
    backdoor įsilaužėliui prisijungti, įsilaužėlis gali prisijungti prie telefono
    komandinės eilutės naudojant metasploit, nuotolinių būdu turėti prieega prie
-   telefono naudojant wondergo.
+   telefono naudojant `wondergo`.
 
-   ###### Nustatyta perskaičius QRC0DE aplikacijos data directorijoje esantį python kodą
+   ###### Nustatyta perskaičius `QRC0DE` aplikacijos data directorijoje esantį `python` kodą
 
-5. Kokius failus galėjo paimti piktavalis?
+5. **Kokius failus galėjo paimti piktavalis?**
 
-6. Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?
+- galėjo paimti realiai viską – turėjo pilna `root` priėjimą.
+- labiausiai tikėtina, jog nutekino `p.zip` failą, kuri sukūrė pati programėlė, kurio turinys yra dešimt nuotraukų.
+
+```
+Archive:  p.zip
+ Length   Method    Size  Cmpr    Date    Time   CRC-32   Name
+--------  ------  ------- ---- ---------- ----- --------  ----
+       0  Stored        0   0% 08-30-2021 12:12 00000000  p/
+   67119  Defl:N    58250  13% 08-30-2021 12:12 eb8a02a3  p/IMG_0004.jpg
+  586778  Defl:N   584274   0% 08-30-2021 12:12 a451016f  p/IMG_0001.jpg
+  124080  Defl:N   105692  15% 08-30-2021 12:12 60af3a5c  p/IMG_0003.jpg
+  166176  Defl:N   152562   8% 08-30-2021 12:12 1b3b55aa  p/IMG_0006.jpg
+   21677  Defl:N    21487   1% 08-30-2021 12:12 7bfc0e15  p/IMG_0008.jpg
+   47339  Defl:N    46720   1% 08-30-2021 12:12 4b478c44  p/IMG_0005.jpg
+  244005  Defl:N   213944  12% 08-30-2021 12:12 caed35b2  p/IMG_0009.jpg
+   12684  Defl:N    12506   1% 08-30-2021 12:12 0d339aff  p/IMG_0010.jpg
+ 1768615  Defl:N  1767491   0% 08-30-2021 12:12 74dfa92c  p/IMG_0007.jpg
+   68576  Defl:N    63201   8% 08-30-2021 12:12 1ad56831  p/IMG_0002.jpg
+--------          -------  ---                            -------
+ 3107049          3026127   3%                            11 files
+```
+
+  ###### nustatyta pritaikius "common sense"
+
+6. **Kokiu įrenginiu ir kada buvo fotografuojamas duomenį centras?**
 
 - dvi nuotraukos turi šiuos duomenis:
 
   - nuotrauka `IMG_0006.jpg` padaryta `2018-10-25T14:12:04` pagal `EXIF` arba `2018-10-25T14:12:05` pagal `XMP` ir `IPTC`, fotografuota su Google Pixel 3 XL, metaduomenys modifikuoti su Adobe Photoshop CC 2018, Windows versija
   - nuotrauka `IMG_0007.jpg` padaryta `2005-01-16T10:12:45` pagal `EXIF` metaduomenis, fotografuota su SONY DSC-P92
 
-	###### nustatyta nuskaičius `EXIF`, ir kur yra `XMP` ir `IPTC` duomenis naudojant `GIMP`
+  ###### nustatyta nuskaičius `EXIF`, ir kur yra `XMP` ir `IPTC` duomenis naudojant `GIMP`
 
-7. Ar galite pasakyti kur yra duomenų centras?
+7. **Ar galite pasakyti kur yra duomenų centras?**
 
 - 1360 Kifer Rd, Sunnyvale, CA 94086, USA
 
